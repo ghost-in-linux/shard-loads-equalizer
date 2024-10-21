@@ -1,4 +1,5 @@
 import { test as basteTest } from "@playwright/test";
+import { recordTestsExecutionTime } from "shard-loads-equalizer";
 
 export const test = basteTest.extend<{ forEachTest: void }>({
   forEachTest: [
