@@ -1,11 +1,4 @@
-import { test } from "@playwright/test";
-import { recordTestsExecutionTime } from "shard-loads-equalizer";
-
-// Define a global afterEach hook
-test.afterEach(async ({}, testInfo) => {
-  recordTestsExecutionTime(testInfo); // Custom function to measure time
-});
-
+import { test } from "../basetest";
 test.describe("h_1st_describe", () => {
   test("confirm page loads without errors", async ({ page }) => {
     await page.waitForTimeout(16000);
