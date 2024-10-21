@@ -12,5 +12,6 @@ export const test = basteTest.extend<{ forEachTest: void }>({
 
 // Register the afterEach hook outside of the use function
 test.afterEach(async ({}, testInfo) => {
+  console.log("After each test");
   recordTestsExecutionTime(testInfo);
 });
